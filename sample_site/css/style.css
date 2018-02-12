@@ -1,0 +1,92 @@
+body {
+    margin: 1em;
+    text-align: center;
+    background-color: #EFFFCD;
+    font-family: monospace;
+}
+
+nav {
+    display: flex;
+    width: 99%;
+    margin: 1em;
+    background-color: #99173C;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 6px 11px 10px 0px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow:    6px 11px 10px 0px rgba(0, 0, 0, 0.85);
+    box-shadow:         6px 11px 10px 0px rgba(0, 0, 0, 0.85);
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    margin: 1em;
+}
+
+.menu-section {
+    text-align: center;
+    color: #FFF;
+    font-size: 3em;
+    width: 25%;
+}
+
+.menu-text {
+    margin-top: 81px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 100px;
+}
+
+main {
+    height: 100%;
+    width: 99%;
+    margin: 1em;
+}
+
+.main-gallery {
+    height: 40%;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-child {
+    position: absolute;
+    min-height: 100% !important;
+    width: 100%;
+    z-index: 0;
+}
+
+.container {
+    display: flex;
+    background-color: #555152;
+    height: 70%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+section {
+    text-align: left;
+    color: #FFF;
+    height: 94%;
+    padding: 1em;
+    width: 49%;
+    margin: .4em;
+}
+
+.bar-right {
+    border-right: .1em #2E2633 solid;
+}
+
+.section-title {
+    font-size: 2.5em;
+    text-decoration: underline;
+}
+
+.section-text {
+    font-size: 1.7em;
+    max-height: 80%;
+    overflow-y: auto;
+}
