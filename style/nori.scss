@@ -6,6 +6,14 @@
  Nori is developed and updated by Patrick O'Doherty
  Project was started on Feb 14, 2018 */
 
+/* Decalre Variables */
+$background-color: #f1f1f1;
+$foreground-color: #fff;
+$text-color: #302934;
+$highlight-color: #A53B50;
+
+$subheading-size: 1.3em;
+
 /* Import Fonts */
 
 @import url('https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans|Merriweather|Merriweather+Sans|Nunito|Nunito+Sans|Quattrocento|Quattrocento+Sans|Roboto|Roboto+Mono|Roboto+Slab');
@@ -30,7 +38,8 @@
 body {
     margin-top: 2rem !important;
     font-family: 'Roboto Slab', sans-serif;
-    background-color: #f1f1f1;
+    color: $text-color;
+    background-color: $background-color;
 }
 div {
     display: block;
@@ -39,7 +48,7 @@ div {
 .icon {
     margin-left: 5px;
     margin-right: 10px;
-    color: #A53B50;
+    color: $highlight-color;
 }
 
 /* Grid container */
@@ -59,16 +68,27 @@ div {
     height: 80px;
 }
 
-.grid-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    text-align: center;
+/* Text */
+/* Describes different classes that format text */
+
+.title {
+    font-size: $subheading-size;
+}
+.date {
+    .current {
+        background-color: $highlight-color;
+        color: #fff;
+        border-radius: 4px;
+        padding: 0 8px 0 8px;
+    }
+    color: $highlight-color;
+    padding: 5px 0 5px 0;
+}
+.desc {
+    color: black;
 }
 
 /* Portfolio */
-
 /* A portfolio has a guest profile, an article, and a sidebar */
 
 .l-portfolio {
@@ -85,7 +105,8 @@ div {
         }
     }
     .l-profile {
-        background-color: #fff;
+        min-height: 500px;
+        background-color: $foreground-color;
         @media (min-width: 700px) {
             width: percentage(4/12);
             float: left;
@@ -104,18 +125,20 @@ div {
             font-size: 20px;
             color: white;
             position: absolute;
-            left: 0;
-            bottom: 0;
+            left: 10;
+            bottom: 10;
         }
         .contact {
             margin-top: 5px;
+            font-weight: bold;
             display: block;
             text-align: justify;
         }
     }
     .l-main {
         margin-top: 20px;
-        background-color: #fff;
+        min-height: 500px;
+        background-color: $foreground-color;
         @media (min-width: 700px) {
             width: percentage(8/12);
             margin-top: 0;
@@ -124,10 +147,14 @@ div {
         @media (min-width: 1200px) {
             width: percentage(6/12);
         }
+        .work-history {
+            margin-left: 50px;
+        }
     }
     .l-sidebar {
         margin-top: 20px;
-        background-color: #fff;
+        min-height: 500px;
+        background-color: $foreground-color;
         @media (min-width: 700px) {
             width: percentage(8/12);
             float: right;
