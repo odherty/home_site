@@ -1,0 +1,155 @@
+/*
+ Nori is a complete css grid system to format webpages.
+ It makes use of an unequal-width column style with fixed gutters
+ The classes are a CSS style, meaning they describe different elements you can use,
+ instead of writing the column location and number out (sidebars rather than col-md-3)
+ Nori is developed and updated by Patrick O'Doherty
+ Project was started on Feb 14, 2018 */
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans|Merriweather|Merriweather+Sans|Nunito|Nunito+Sans|Quattrocento|Quattrocento+Sans|Roboto|Roboto+Mono|Roboto+Slab");
+/* Mixin */
+/* Here, we change the box-sizing to border-box so calculations are consistent  */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 2rem !important;
+  font-family: 'Roboto Slab', sans-serif;
+  background-color: #f1f1f1;
+}
+
+div {
+  display: block;
+}
+
+.icon {
+  margin-left: 5px;
+  margin-right: 10px;
+  color: #A53B50;
+}
+
+/* Grid container */
+.l-wrap {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.column {
+  width: calc((100% - 24px * 12) / 12);
+  margin-right: 12px;
+  margin-left: 12px;
+  background: rgba(0, 0, 255, 0.5);
+  float: left;
+  height: 80px;
+}
+
+.grid-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  text-align: center;
+}
+
+/* Portfolio */
+/* A portfolio has a guest profile, an article, and a sidebar */
+.l-portfolio:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.l-portfolio p {
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+@media (min-width: 700px) {
+  .l-portfolio .grid-item {
+    padding-left: 12px;
+    padding-right: 12px;
+    float: left;
+  }
+}
+
+.l-portfolio .l-profile {
+  background-color: #fff;
+}
+
+@media (min-width: 700px) {
+  .l-portfolio .l-profile {
+    width: 33.33333%;
+    float: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .l-portfolio .l-profile {
+    width: 25%;
+  }
+}
+
+.l-portfolio .l-profile .picture-container {
+  margin-top: 10px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.l-portfolio .l-profile .picture-caption {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.l-portfolio .l-profile .contact {
+  margin-top: 5px;
+  display: block;
+  text-align: justify;
+}
+
+.l-portfolio .l-main {
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+@media (min-width: 700px) {
+  .l-portfolio .l-main {
+    width: 66.66667%;
+    margin-top: 0;
+    float: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .l-portfolio .l-main {
+    width: 50%;
+  }
+}
+
+.l-portfolio .l-sidebar {
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+@media (min-width: 700px) {
+  .l-portfolio .l-sidebar {
+    width: 66.66667%;
+    float: right;
+  }
+}
+
+@media (min-width: 1200px) {
+  .l-portfolio .l-sidebar {
+    width: 25%;
+    margin-top: 0;
+  }
+}
+/*# sourceMappingURL=nori.css.map */

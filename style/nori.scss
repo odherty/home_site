@@ -1,0 +1,140 @@
+/*
+ Nori is a complete css grid system to format webpages.
+ It makes use of an unequal-width column style with fixed gutters
+ The classes are a CSS style, meaning they describe different elements you can use,
+ instead of writing the column location and number out (sidebars rather than col-md-3)
+ Nori is developed and updated by Patrick O'Doherty
+ Project was started on Feb 14, 2018 */
+
+/* Import Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans|Merriweather|Merriweather+Sans|Nunito|Nunito+Sans|Quattrocento|Quattrocento+Sans|Roboto|Roboto+Mono|Roboto+Slab');
+/* Mixin */
+
+@mixin clearfix {
+    &:after {
+        display: table;
+        clear: both;
+        content: '';
+    }
+}
+
+/* Here, we change the box-sizing to border-box so calculations are consistent  */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 2rem !important;
+    font-family: 'Roboto Slab', sans-serif;
+    background-color: #f1f1f1;
+}
+div {
+    display: block;
+}
+
+.icon {
+    margin-left: 5px;
+    margin-right: 10px;
+    color: #A53B50;
+}
+
+/* Grid container */
+
+.l-wrap {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.column {
+    width: calc((100% - 24px * 12) / 12);
+    margin-right: 12px;
+    margin-left: 12px;
+    background: rgba(0, 0, 255, .5);
+    float: left;
+    height: 80px;
+}
+
+.grid-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    text-align: center;
+}
+
+/* Portfolio */
+
+/* A portfolio has a guest profile, an article, and a sidebar */
+
+.l-portfolio {
+    @include clearfix;
+    p {
+        margin-bottom: 5px;
+        margin-top: 0; //background: rgba(147, 147, 165, 0.5);
+    }
+    .grid-item {
+        @media (min-width: 700px) {
+            padding-left: 12px;
+            padding-right: 12px;
+            float: left;
+        }
+    }
+    .l-profile {
+        background-color: #fff;
+        @media (min-width: 700px) {
+            width: percentage(4/12);
+            float: left;
+        }
+        @media (min-width: 1200px) {
+            width: percentage(3/12);
+        }
+        .picture-container {
+            margin-top: 10px;
+            position: relative;
+            display: block;
+            overflow: hidden;
+        }
+        .picture-caption {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 20px;
+            color: white;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .contact {
+            margin-top: 5px;
+            display: block;
+            text-align: justify;
+        }
+    }
+    .l-main {
+        margin-top: 20px;
+        background-color: #fff;
+        @media (min-width: 700px) {
+            width: percentage(8/12);
+            margin-top: 0;
+            float: left;
+        }
+        @media (min-width: 1200px) {
+            width: percentage(6/12);
+        }
+    }
+    .l-sidebar {
+        margin-top: 20px;
+        background-color: #fff;
+        @media (min-width: 700px) {
+            width: percentage(8/12);
+            float: right;
+        }
+        @media (min-width: 1200px) {
+            width: percentage(3/12);
+            margin-top: 0;
+        }
+    }
+}
