@@ -5,10 +5,9 @@
  instead of writing the column location and number out (sidebars rather than col-md-3)
  Nori is developed and updated by Patrick O'Doherty
  Project was started on Feb 14, 2018 */
-/* Decalre Variables */
 /* Import Fonts */
 @import url("https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans|Merriweather|Merriweather+Sans|Nunito|Nunito+Sans|Quattrocento|Quattrocento+Sans|Roboto|Roboto+Mono|Roboto+Slab");
-/* Mixin */
+/* Global Styles */
 /* Here, we change the box-sizing to border-box so calculations are consistent  */
 *,
 *:before,
@@ -69,6 +68,70 @@ div {
 
 .desc {
   color: black;
+}
+
+/* Navigation Bar */
+.l-nav {
+  text-align: center;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  top: 0px;
+  margin-bottom: 15px;
+}
+
+.l-nav:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.l-nav a {
+  color: #D84758;
+  margin-left: 10px;
+  margin-right: 10px;
+  outline: none;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.35em;
+}
+
+.l-nav a:hover {
+  text-decoration: overline underline;
+  text-decoration-color: #302934;
+}
+
+/* Page */
+/* This is a full page */
+.l-page {
+  height: 80%;
+  background-color: #fff;
+}
+
+.l-page .entry {
+  padding: 5px 5px 5px 5px;
+  border: 5px dashed #302934;
+}
+
+.l-page .entry .heading {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  padding: 5px 5px 5px 5px;
+  text-decoration: underline;
+}
+
+.l-page .entry img {
+  height: 30%;
+  width: 20%;
+  object-fit: cover;
+  float: left;
+}
+
+.l-page .entry .desc {
+  padding-left: 20px;
+  font-size: 1.25vw;
+  height: 30%;
+  overflow: auto;
 }
 
 /* Portfolio */

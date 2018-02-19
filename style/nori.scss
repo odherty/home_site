@@ -6,7 +6,7 @@
  Nori is developed and updated by Patrick O'Doherty
  Project was started on Feb 14, 2018 */
 
-/* Decalre Variables */
+// Decalre Variables
 $background-color: #f1f1f1;
 $foreground-color: #fff;
 $text-color: #302934;
@@ -17,7 +17,8 @@ $subheading-size: 1.3em;
 /* Import Fonts */
 
 @import url('https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans|Merriweather|Merriweather+Sans|Nunito|Nunito+Sans|Quattrocento|Quattrocento+Sans|Roboto|Roboto+Mono|Roboto+Slab');
-/* Mixin */
+
+// Mixin
 
 @mixin clearfix {
     &:after {
@@ -27,8 +28,9 @@ $subheading-size: 1.3em;
     }
 }
 
-/* Here, we change the box-sizing to border-box so calculations are consistent  */
+/* Global Styles */
 
+/* Here, we change the box-sizing to border-box so calculations are consistent  */
 *,
 *:before,
 *:after {
@@ -86,6 +88,65 @@ div {
 }
 .desc {
     color: black;
+}
+
+/* Navigation Bar */
+.l-nav {
+    text-align: center;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    top: 0px;
+    margin-bottom: 15px;
+    @include clearfix;
+    a {
+        color: #D84758;
+        margin-left: 10px;
+        margin-right: 10px;
+        outline: none;
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-size: 1.35em;
+    }
+    a:hover {
+        text-decoration: overline underline;
+        text-decoration-color: $text-color;
+    }
+    
+    .logo {
+        
+    }
+}
+
+/* Page */
+/* This is a full page */
+
+.l-page {
+    height: 80%;
+    background-color: $foreground-color;
+    .entry {
+        padding: 5px 5px 5px 5px;
+        border: 5px dashed $text-color;
+        .heading {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 20px;
+            padding: 5px 5px 5px 5px;
+            text-decoration: underline;
+        }
+        img {
+            height: 30%;
+            width: 20%;
+            object-fit: cover;
+            float: left;
+        }
+        .desc {
+            padding-left: 20px;
+            font-size: 1.25vw;
+            height: 30%;
+            //float: right;
+            overflow: auto;
+        }
+    }
 }
 
 /* Portfolio */
