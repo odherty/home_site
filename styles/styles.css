@@ -1,0 +1,46 @@
+/*
+ * Globals
+ */
+
+ /*
+ * Breakpoints
+ */
+ @media only screen and (max-width: 600px) {
+  .cover { 
+    height: 20em!important;
+    width: 20em!important;
+  }
+  .partition p {
+    font-size: 2em!important;
+  }
+ }
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  /*box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);*/
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+

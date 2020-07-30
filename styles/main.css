@@ -1,0 +1,51 @@
+body {
+  background-blend-mode: multiply;
+}
+
+
+/*
+ * Cover
+ */
+ .cover {
+    height: 40em;
+    width: 40em;
+    margin: auto;
+    border: black 5px solid;
+  }
+  
+  .partition {
+    width: 50%; 
+    height: 50%;
+    float: left;
+    border: black 5px solid;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .projects:hover {
+    background-color: red;
+    color: white;
+  }
+  
+  .resume:hover {
+    background-color: blue;
+    color: white;
+  }
+  
+  .contact:hover {
+    background-color: green;
+    color: white;
+  }
+  
+  .misc:hover {
+    background-color: black;
+  }
+  
+  .partition p {
+    font-size: 4em;
+    flex: 0 0 120px;
+    cursor: pointer;
+  }
+  
